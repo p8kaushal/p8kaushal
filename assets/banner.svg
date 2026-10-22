@@ -1,0 +1,329 @@
+<svg width="850" height="290" viewBox="0 0 850 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Crisp Bright Studio Canvas Background -->
+    <linearGradient id="canvasGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#F1F5F9" />
+    </linearGradient>
+
+    <!-- Warm Sunlight & Fresh Mint Ambient Glows (Bright & Clean) -->
+    <radialGradient id="topGlow" cx="50%" cy="15%" r="45%">
+      <stop offset="0%" stop-color="#FFEDD5" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#FFEDD5" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="leftWarmGlow" cx="20%" cy="65%" r="40%">
+      <stop offset="0%" stop-color="#FEF3C7" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#FEF3C7" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="rightMintGlow" cx="80%" cy="65%" r="40%">
+      <stop offset="0%" stop-color="#D1FAE5" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#D1FAE5" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Vibrant Tangerine / Emerald Accent Line Gradient -->
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EA580C" stop-opacity="0" />
+      <stop offset="30%" stop-color="#EA580C" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#10B981" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Clean Technical Dot Grid -->
+    <pattern id="dotGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="14" cy="14" r="0.8" fill="#94A3B8" fill-opacity="0.35" />
+    </pattern>
+
+    <!-- Isometric Shading: Vibrant Tangerine / Coral Core -->
+    <linearGradient id="topOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB923C" />
+      <stop offset="100%" stop-color="#F97316" />
+    </linearGradient>
+    <linearGradient id="leftOrange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EA580C" />
+      <stop offset="100%" stop-color="#C2410C" />
+    </linearGradient>
+    <linearGradient id="rightOrange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C2410C" />
+      <stop offset="100%" stop-color="#9A3412" />
+    </linearGradient>
+
+    <!-- Isometric Shading: Fresh Emerald / Mint -->
+    <linearGradient id="topEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="leftEmerald" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="rightEmerald" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#065F46" />
+    </linearGradient>
+
+    <!-- Isometric Shading: High-Contrast Dark Slate Block -->
+    <linearGradient id="topDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="leftDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="rightDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <style>
+      .name-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 28px;
+        font-weight: 800;
+        letter-spacing: 5px;
+        fill: #0F172A;
+        text-transform: uppercase;
+      }
+      .tag-text {
+        font-family: 'SF Mono', Monaco, Menlo, 'Fira Code', Consolas, monospace;
+        font-size: 10.5px;
+        font-weight: 600;
+        letter-spacing: 2.2px;
+        fill: #EA580C;
+        text-transform: uppercase;
+      }
+      @keyframes flowData {
+        from { stroke-dashoffset: 60; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.95; transform: scale(1); }
+        50% { opacity: 0.45; transform: scale(1.18); }
+      }
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+      }
+      @keyframes floatFast {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-9px); }
+      }
+      .anim-bus {
+        stroke-dasharray: 6 6;
+        animation: flowData 2.2s linear infinite;
+      }
+      .anim-bus-rev {
+        stroke-dasharray: 6 6;
+        animation: flowData 2.8s linear infinite reverse;
+      }
+      .anim-pulse {
+        animation: pulseGlow 2.8s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .float-1 {
+        animation: floatSlow 5s ease-in-out infinite;
+      }
+      .float-2 {
+        animation: floatFast 4s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Crisp Studio Canvas Frame -->
+  <rect width="850" height="290" rx="10" fill="url(#canvasGrad)" stroke="#CBD5E1" stroke-width="1.2" />
+  <rect width="850" height="290" rx="10" fill="url(#dotGrid)" />
+
+  <!-- Ambient Light Volumes -->
+  <rect width="850" height="290" rx="10" fill="url(#topGlow)" />
+  <rect width="850" height="290" rx="10" fill="url(#leftWarmGlow)" />
+  <rect width="850" height="290" rx="10" fill="url(#rightMintGlow)" />
+
+  <!-- ============================================================= -->
+  <!-- TOP MASTHEAD: PARTH KAUSHAL (Refined Razor-Sharp Typography) -->
+  <!-- ============================================================= -->
+  <g transform="translate(425, 42)">
+    <!-- Developer Name in Deep Slate Ink -->
+    <text x="0" y="0" text-anchor="middle" class="name-text">PARTH KAUSHAL</text>
+    
+    <!-- Subtitle / Core Disciplines -->
+    <g transform="translate(0, 22)">
+      <circle cx="-185" cy="-3.5" r="3" fill="#10B981" class="anim-pulse" />
+      <text x="0" y="0" text-anchor="middle" class="tag-text">FULL-STACK &#8226; MACHINE LEARNING &#8226; WEB3 &#8226; CYBERSECURITY</text>
+    </g>
+
+    <!-- Hairline Accent Divider -->
+    <line x1="-165" y1="34" x2="165" y2="34" stroke="url(#lineGrad)" stroke-width="1.5" />
+  </g>
+
+  <!-- ============================================================= -->
+  <!-- CIRCUIT & DATA HIGHWAYS (Tactile Technical Drafting Paths)    -->
+  <!-- ============================================================= -->
+
+  <!-- Left to Center Highway (Machine Learning / Data Flow) -->
+  <path d="M 120 120 L 220 120 L 280 180 L 390 180" stroke="#CBD5E1" stroke-width="1.5" fill="none" />
+  <path d="M 120 120 L 220 120 L 280 180 L 390 180" stroke="#EA580C" stroke-width="1.5" fill="none" class="anim-bus" opacity="0.9" />
+
+  <path d="M 100 235 L 190 235 L 260 195 L 390 195" stroke="#CBD5E1" stroke-width="1.5" fill="none" />
+  <path d="M 100 235 L 190 235 L 260 195 L 390 195" stroke="#10B981" stroke-width="1.5" fill="none" class="anim-bus-rev" opacity="0.9" />
+
+  <!-- Center to Right Highway (Decentralized Web3 & Cryptographic Mesh) -->
+  <path d="M 460 180 L 570 180 L 630 115 L 730 115" stroke="#CBD5E1" stroke-width="1.5" fill="none" />
+  <path d="M 460 180 L 570 180 L 630 115 L 730 115" stroke="#EA580C" stroke-width="1.5" fill="none" class="anim-bus" opacity="0.9" />
+
+  <path d="M 460 195 L 590 195 L 660 240 L 750 240" stroke="#CBD5E1" stroke-width="1.5" fill="none" />
+  <path d="M 460 195 L 590 195 L 660 240 L 750 240" stroke="#10B981" stroke-width="1.5" fill="none" class="anim-bus-rev" opacity="0.9" />
+
+  <!-- Bus Feeders -->
+  <line x1="425" y1="245" x2="425" y2="278" stroke="#EA580C" stroke-width="1" stroke-dasharray="3 3" opacity="0.6" />
+
+  <!-- ============================================================= -->
+  <!-- LEFT WING: NEURAL CLUSTERS & TENSOR NODES (AI/ML)              -->
+  <!-- ============================================================= -->
+  <g transform="translate(60, 95)">
+    <!-- Connections -->
+    <line x1="60" y1="30" x2="110" y2="60" stroke="#94A3B8" stroke-width="1" />
+    <line x1="60" y1="90" x2="110" y2="60" stroke="#94A3B8" stroke-width="1" />
+    <line x1="110" y1="60" x2="160" y2="25" stroke="#EA580C" stroke-width="1.2" opacity="0.8" />
+    <line x1="110" y1="60" x2="160" y2="95" stroke="#EA580C" stroke-width="1.2" opacity="0.8" />
+    <line x1="160" y1="25" x2="210" y2="60" stroke="#10B981" stroke-width="1" />
+    <line x1="160" y1="95" x2="210" y2="60" stroke="#10B981" stroke-width="1" />
+
+    <!-- Nodes with Halo Rings -->
+    <!-- Input Layer -->
+    <circle cx="60" cy="30" r="5" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.8" />
+    <circle cx="60" cy="30" r="2" fill="#EA580C" />
+    <circle cx="60" cy="90" r="5" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.8" />
+    <circle cx="60" cy="90" r="2" fill="#EA580C" />
+
+    <!-- Latent Representation Node (Core Pulse) -->
+    <circle cx="110" cy="60" r="8" fill="#FFF7ED" stroke="#EA580C" stroke-width="2" />
+    <circle cx="110" cy="60" r="3.5" fill="#EA580C" class="anim-pulse" />
+
+    <!-- Hidden Layer 2 -->
+    <circle cx="160" cy="25" r="5" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.8" />
+    <circle cx="160" cy="25" r="2" fill="#EA580C" />
+    <circle cx="160" cy="95" r="5" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.8" />
+    <circle cx="160" cy="95" r="2" fill="#EA580C" />
+
+    <!-- Output Inference Node -->
+    <circle cx="210" cy="60" r="7" fill="#FFFFFF" stroke="#10B981" stroke-width="2" />
+    <circle cx="210" cy="60" r="3" fill="#10B981" />
+
+    <!-- Floating Tensor Data Block -->
+    <g transform="translate(145, 115)" class="float-1">
+      <rect x="0" y="0" width="34" height="34" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
+      <circle cx="17" cy="17" r="6" fill="#FFEDD5" stroke="#EA580C" stroke-width="1.2" />
+      <circle cx="17" cy="17" r="2.5" fill="#EA580C" />
+    </g>
+  </g>
+
+  <!-- ============================================================= -->
+  <!-- CENTER: ISOMETRIC ARCHITECTURE CORE (Compute Platform)         -->
+  <!-- ============================================================= -->
+  <g transform="translate(425, 192)">
+    <!-- Base Platform: Isometric Octagon Plate -->
+    <polygon points="0,-44 65,-16 65,16 0,44 -65,16 -65,-16" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5" />
+    <polygon points="0,-36 55,-13 55,13 0,36 -55,13 -55,-13" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" stroke-dasharray="4 4" />
+
+    <!-- Radiating Bus Pins -->
+    <line x1="-65" y1="0" x2="-82" y2="0" stroke="#EA580C" stroke-width="1.8" />
+    <line x1="65" y1="0" x2="82" y2="0" stroke="#EA580C" stroke-width="1.8" />
+    <line x1="-32" y1="-30" x2="-40" y2="-38" stroke="#EA580C" stroke-width="1.8" />
+    <line x1="32" y1="-30" x2="40" y2="-38" stroke="#EA580C" stroke-width="1.8" />
+    <line x1="-32" y1="30" x2="-40" y2="38" stroke="#10B981" stroke-width="1.8" />
+    <line x1="32" y1="30" x2="40" y2="38" stroke="#10B981" stroke-width="1.8" />
+
+    <!-- Tier 1 Base Isometric Block (Deep Slate for High Contrast) -->
+    <g transform="translate(0, -6)">
+      <!-- Top Face -->
+      <path d="M 0 -22 L 35 -5 L 0 12 L -35 -5 Z" fill="url(#topDark)" stroke="#475569" stroke-width="0.8" />
+      <!-- Left Face -->
+      <path d="M -35 -5 L 0 12 L 0 28 L -35 11 Z" fill="url(#leftDark)" />
+      <!-- Right Face -->
+      <path d="M 0 12 L 35 -5 L 35 11 L 0 28 Z" fill="url(#rightDark)" />
+    </g>
+
+    <!-- Tier 2 Elevated Core Block (Vibrant Tangerine Accent) -->
+    <g transform="translate(0, -26)" class="float-1">
+      <!-- Top Face -->
+      <path d="M 0 -16 L 25 -4 L 0 9 L -25 -4 Z" fill="url(#topOrange)" stroke="#FDBA74" stroke-width="0.8" />
+      <!-- Left Face -->
+      <path d="M -25 -4 L 0 9 L 0 21 L -25 9 Z" fill="url(#leftOrange)" />
+      <!-- Right Face -->
+      <path d="M 0 9 L 25 -4 L 25 9 L 0 21 Z" fill="url(#rightOrange)" />
+    </g>
+
+    <!-- Floating Quantum Beacon Node -->
+    <g transform="translate(0, -52)" class="float-2">
+      <!-- Outer Diamond -->
+      <polygon points="0,-10 10,0 0,10 -10,0" fill="#0F172A" stroke="#EA580C" stroke-width="1.8" />
+      <!-- Inner Glowing Core -->
+      <polygon points="0,-6 6,0 0,6 -6,0" fill="#FB923C" />
+      <circle cx="0" cy="0" r="2" fill="#FFFFFF" />
+      <!-- Laser Downlink -->
+      <line x1="0" y1="10" x2="0" y2="24" stroke="#EA580C" stroke-width="1.2" stroke-dasharray="2 2" opacity="0.8" />
+    </g>
+  </g>
+
+  <!-- ============================================================= -->
+  <!-- RIGHT WING: DISTRIBUTED BLOCKS & CRYPTOGRAPHIC SECURITY        -->
+  <!-- ============================================================= -->
+  <g transform="translate(610, 100)">
+    <!-- Blockchain Blocks -->
+    <!-- Block 1 (Vibrant Coral / Tangerine) -->
+    <g transform="translate(30, 40)" class="float-2">
+      <path d="M 0 -11 L 18 -2 L 0 7 L -18 -2 Z" fill="url(#topOrange)" stroke="#FDBA74" stroke-width="0.8" />
+      <path d="M -18 -2 L 0 7 L 0 17 L -18 9 Z" fill="url(#leftOrange)" />
+      <path d="M 0 7 L 18 -2 L 18 9 L 0 17 Z" fill="url(#rightOrange)" />
+    </g>
+
+    <!-- Interlink Bridge -->
+    <line x1="45" y1="42" x2="85" y2="60" stroke="#EA580C" stroke-width="1.5" stroke-dasharray="3 3" />
+    <circle cx="65" cy="51" r="2.5" fill="#EA580C" />
+
+    <!-- Block 2 (Fresh Emerald / Verified State) -->
+    <g transform="translate(85, 58)" class="float-1">
+      <path d="M 0 -12 L 22 -2 L 0 9 L -22 -2 Z" fill="url(#topEmerald)" stroke="#6EE7B7" stroke-width="0.8" />
+      <path d="M -22 -2 L 0 9 L 0 21 L -22 11 Z" fill="url(#leftEmerald)" />
+      <path d="M 0 9 L 22 -2 L 22 11 L 0 21 Z" fill="url(#rightEmerald)" />
+    </g>
+
+    <!-- Interlink Bridge 2 -->
+    <line x1="100" y1="62" x2="135" y2="34" stroke="#10B981" stroke-width="1.5" stroke-dasharray="3 3" />
+    <circle cx="118" cy="48" r="2.5" fill="#10B981" />
+
+    <!-- Block 3 (Slate Block) -->
+    <g transform="translate(135, 28)">
+      <path d="M 0 -9 L 16 -1 L 0 7 L -16 -1 Z" fill="url(#topDark)" stroke="#475569" stroke-width="0.8" />
+      <path d="M -16 -1 L 0 7 L 0 16 L -16 8 Z" fill="url(#leftDark)" />
+      <path d="M 0 7 L 16 -1 L 16 8 L 0 16 Z" fill="url(#rightDark)" />
+    </g>
+
+    <!-- Cryptographic Shield / Security Node -->
+    <g transform="translate(112, 115)">
+      <!-- Security Shield Outer Contour -->
+      <path d="M 0 -14 L 14 -8 L 14 4 C 14 12 0 18 0 18 C 0 18 -14 12 -14 4 L -14 -8 Z" fill="#0F172A" stroke="#10B981" stroke-width="1.8" />
+      <!-- Inner Shield Verification Node -->
+      <path d="M 0 -8 L 8 -4 L 8 3 C 8 8 0 12 0 12 C 0 12 -8 8 -8 3 L -8 -4 Z" fill="#10B981" fill-opacity="0.25" stroke="#34D399" stroke-width="1" />
+      <circle cx="0" cy="2" r="2.2" fill="#34D399" />
+      
+      <!-- Verification Beam Lines -->
+      <line x1="0" y1="-14" x2="0" y2="-24" stroke="#10B981" stroke-width="1.5" stroke-dasharray="2 2" />
+    </g>
+  </g>
+
+  <!-- ============================================================= -->
+  <!-- CORNER CAD MARKS (Architectural Precision)                    -->
+  <!-- ============================================================= -->
+  <g stroke="#94A3B8" stroke-width="1.2" opacity="0.8">
+    <line x1="16" y1="16" x2="26" y2="16" />
+    <line x1="16" y1="16" x2="16" y2="26" />
+    <line x1="834" y1="16" x2="824" y2="16" />
+    <line x1="834" y1="16" x2="834" y2="26" />
+    <line x1="16" y1="274" x2="26" y2="274" />
+    <line x1="16" y1="274" x2="16" y2="264" />
+    <line x1="834" y1="274" x2="824" y2="274" />
+    <line x1="834" y1="274" x2="834" y2="264" />
+  </g>
+</svg>
